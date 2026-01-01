@@ -1,6 +1,6 @@
 Sistem web yang mengotomasi proses pengajuan penghargaan publikasi buku dosen dari pengajuan hingga pencairan dana, menggantikan proses manual dengan platform digital terintegrasi.
 
-Fitur Utama:
+✨ Fitur Utama:
 
 Portal Dosen: Pengajuan buku dengan form digital dan upload dokumen pendukung
 
@@ -26,7 +26,7 @@ Autentikasi: Integrasi dengan SDI Users API
 
 Standar: Mengikuti SDI Laravel Development Guidelines
 
-Pencapaian:
+🎯 Pencapaian:
 
 Mengurangi waktu proses dari hari/minggu menjadi hitungan menit
 
@@ -36,7 +36,7 @@ Meminimalkan kesalahan administratif melalui validasi otomatis
 
 Mendukung ~100 pengguna aktif dengan 500+ pengajuan/bulan
 
- Scope Proyek:
+📊 Scope Proyek:
 
 Analisis kebutuhan dan pembuatan SRS lengkap
 
