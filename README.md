@@ -4,7 +4,7 @@
 
 ### [16-11-2025]
 
--   [Abdullah Ubaid] Inisialisasi proyek
+-   [Christian Johannes H] Inisialisasi proyek
 
 ## Quality Checks
 
