@@ -1,172 +1,49 @@
-# ITDel Starter APP
+Sistem web yang mengotomasi proses pengajuan penghargaan publikasi buku dosen dari pengajuan hingga pencairan dana, menggantikan proses manual dengan platform digital terintegrasi.
 
-## Logs
+Fitur Utama:
 
-### [16-11-2025]
+Portal Dosen: Pengajuan buku dengan form digital dan upload dokumen pendukung
 
--   [Christian Johannes H] Inisialisasi proyek
+Dashboard LPPM: Sistem penilaian dua tingkat (Staff verifikasi, Ketua keputusan akhir)
 
-## Quality Checks
+Modul HRD: Verifikasi akhir dan penjadwalan pencairan dana
 
-### Composer Audit
+Sistem Notifikasi: Update real-time status pengajuan untuk semua pihak
 
-Composer Audit adalah perintah Composer yang digunakan untuk memeriksa keamanan paket PHP yang terinstal di proyek.
+RBAC: Otorisasi berbeda untuk Dosen, Staff LPPM, Ketua LPPM, dan HRD
 
-```bash
-composer audit
-```
+Audit Trail: Pencatatan lengkap semua aktivitas dan perubahan status
 
-### NPM Audit
+🛠️ Teknologi:
 
-NPM Audit adalah perintah NPM yang digunakan untuk memeriksa keamanan paket NodeJS yang terinstal di proyek.
+Backend: Laravel 12, PHP 8.4
 
-```bash
-npm audit --audit-level=moderate
-```
+Frontend: Blade Templates, Livewire 3
 
-### Laravel Pint
+Database: PostgreSQL 18
 
-Laravel pint untuk memeriksa dan memperbaiki format kode PHP secara otomatis.
+Autentikasi: Integrasi dengan SDI Users API
 
-#### Install Laravel Pint
+Standar: Mengikuti SDI Laravel Development Guidelines
 
-```bash
-composer require laravel/pint --dev
-```
+Pencapaian:
 
-#### Melakukan perbaikan format kode PHP
+Mengurangi waktu proses dari hari/minggu menjadi hitungan menit
 
-```bash
-vendor/bin/pint
-```
+Meningkatkan transparansi dengan tracking status real-time
 
-### Eslint
+Meminimalkan kesalahan administratif melalui validasi otomatis
 
-ESLint adalah tools analisis kode statis untuk JavaScript dan TypeScript yang berfungsi mendeteksi error, menjaga konsistensi style, dan menerapkan best practices dalam penulisan kode
+Mendukung ~100 pengguna aktif dengan 500+ pengajuan/bulan
 
-```bash
-npx eslint . --format table
-```
+ Scope Proyek:
 
-#### Melakukan pengecekan format kode PHP
+Analisis kebutuhan dan pembuatan SRS lengkap
 
-```bash
-vendor/bin/pint --test
-```
+Desain sistem dengan UML diagrams (Use Case, Activity, ERD)
 
-### Larastan
+Pengembangan full-stack aplikasi web
 
-Larastan adalah static code analysis tool yang menganalisis kode PHP Laravel tanpa harus menjalankannya.
+Implementasi keamanan dan role-based access control
 
-#### Membuatuhkan file: phpstan.neon
-
-```bash
-includes:
-    - ./vendor/larastan/larastan/extension.neon
-
-parameters:
-    level: 8 # Level 1 - 8 (unstrict - strict)
-    paths:
-        - app
-        - routes
-```
-
-#### Install Larastan
-
-```bash
-composer require --dev larastan/larastan
-```
-
-#### Melakukan Analisis dengan Larastan
-
-```bash
-vendor/bin/phpstan analyse
-```
-
-### Testing Coverage
-
-Testing Coverage untuk melakukan pengujian yang mencakup semua kemungkinan pada kode program yang dibuat guna mengurangi kemungkinan bug yang akan tejadi pada saat sudah di production.
-
-#### Melakukan Pengujian dengan Coverage
-
-```bash
-php artisan test --coverage
-```
-
-### Melakukan Pengujian Spesifik
-
-```bash
-# php artisan test PATH_FILE_TEST
-php artisan test tests/Feature/Livewire/Auth/LoginLivewireTest.php
-
-php artisan test tests/Unit/Middleware/HandleInertiaRequestsTest.php
-
-php artisan test tests/Feature/Controllers/Home/HomeControllerTest.php
-
-php artisan test tests/Feature/Controllers/Auth/AuthControllerTest.php
-
-php artisan test tests/Feature/Controllers/HakAkses/HakAksesControllerTest.php
-```
-
-## Catatan Syntax
-
-```bash
-# 🎯 TYPE DEFINITIONS (TypeScript Support)
-npm i --save-dev @types/react
-
-# 🎨 UI COMPONENTS (shadcn/ui)
-npx shadcn@latest add checkbox
-npx shadcn@latest add tabs
-
-# 🔗 LARAVEL ZIGGY (Route Helper)
-php artisan ziggy:generate resources/js/ziggy.js
-
-# 🔧 ESLINT & CODE QUALITY
-
-# Core ESLint dan plugins
-npm install -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-unused-imports @eslint/js globals
-
-# Babel parser dan preset
-npm install -D @babel/eslint-parser
-npm install -D @babel/preset-react
-
-# Formatter dan additional plugins
-npm install -D eslint-formatter-table
-npm install eslint-plugin-react-hooks --save-dev
-npm install --save-dev @eslint/js eslint-plugin-react eslint-plugin-react-hooks
-```
-
-## Template Tests
-
-```php
-<?php
-
-namespace Tests\Unit;
-
-use PHPUnit\Framework\Attributes\Test;
-use Tests\TestCase;
-
-class ToolsHelperTest extends TestCase
-{
-    #[Test]
-    public function contoh_format_pengujian()
-    {
-        // -------------------------------------
-        // Arrange (Persiapan)
-        // -------------------------------------
-        $nilai1 = 10;
-        $nilai2 = 20;
-        $expected = 30;
-
-        // -------------------------------------
-        // Act (Aksi)
-        // -------------------------------------
-        $hasil = $nilai1 + $nilai2;
-
-        // -------------------------------------
-        // Assert (Verifikasi)
-        // -------------------------------------
-        $this->assertEquals($expected, $hasil);
-    }
-}
-```
+Pengujian fungsional dan user acceptance testing
